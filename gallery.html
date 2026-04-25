@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Sri Lakshmi Venkateswara Dental Hospital</title>
+    <meta name="description" content="Explore clinic ambience and treatment environment through a fast-loading, accessible gallery." />
+    <meta property="og:title" content="Gallery - Sri Lakshmi Venkateswara Dental Hospital" />
+    <meta property="og:description" content="A modern, visual look at our clinic setting and care atmosphere." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Dentist","name":"Sri Lakshmi Venkateswara Dental Hospital","areaServed":"Proddatur","address":{"@type":"PostalAddress","streetAddress":"Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet","addressLocality":"Proddatur","addressRegion":"Andhra Pradesh","postalCode":"516360","addressCountry":"IN"},"telephone":"+91 90522 77769","openingHours":["Mo-Su 09:00-21:00"]}
+    </script>
+  </head>
+  <body>
+    <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><strong data-clinic="name"></strong><small>Super Speciality Dental Hospital</small></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="gallery.html" aria-current="page">Gallery</a><a href="contact.html">Contact</a><a href="book.html">Book</a></nav></div></header>
+    <main>
+      <section class="section"><div class="container"><p class="eyebrow">Gallery</p><h1>Inside our clean and calm treatment environment</h1></div></section>
+      <section class="section"><div class="container"><div class="gallery" data-gallery>
+        <button data-full="assets/img/interior.svg" data-alt="Clinic interior"><img src="assets/img/interior.svg" alt="Clinic interior seating" loading="lazy" width="900" height="1200" /></button>
+        <button data-full="assets/img/dentist-work.svg" data-alt="Dentist consultation"><img src="assets/img/dentist-work.svg" alt="Dentist procedure setup" loading="lazy" width="900" height="1200" /></button>
+        <button data-full="assets/img/hero-clinic.svg" data-alt="Clinic building"><img src="assets/img/hero-clinic.svg" alt="Clinic overview" loading="lazy" width="900" height="1200" /></button>
+        <button data-full="assets/img/interior.svg" data-alt="Reception zone"><img src="assets/img/interior.svg" alt="Reception area" loading="lazy" width="900" height="1200" /></button>
+        <button data-full="assets/img/dentist-work.svg" data-alt="Patient care setup"><img src="assets/img/dentist-work.svg" alt="Patient chair setup" loading="lazy" width="900" height="1200" /></button>
+      </div></div></section>
+      <dialog class="lightbox" id="lightbox"><div class="lightbox-frame"><button class="btn btn-secondary lightbox-close" id="lightboxClose">Close</button><img id="lightboxImage" src="" alt="Gallery preview" /></div></dialog>
+    </main>
+    <footer class="footer"><div class="container footer-grid"><div><strong data-clinic="name"></strong><p data-clinic="address"></p><p><a data-link="tel" href="#" data-clinic="phone"></a></p></div><div><strong>Quick Links</strong><p><a href="services.html">Services</a> | <a href="book.html">Book</a> | <a href="reviews.html">Reviews</a></p></div><div><strong>Hours</strong><p data-clinic="hours"></p><small>Alt name: <span data-clinic="alt-name"></span></small></div></div><div class="container"><small>© <span id="year"></span> <span data-clinic="name"></span></small></div></footer>
+    <div class="mobile-bar"><a data-link="tel" href="#">Call</a><a data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="book.html">Book</a></div>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
