@@ -42,7 +42,7 @@ const CLINIC = Object.freeze({
 /**
  * Apps Script Web App URL — Replace with your deployed URL
  */
-const API_URL = 'YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+const API_URL = 'https://script.google.com/macros/s/AKfycbzlhTz2Exs0OFo9CICShDGBxjplgvYVNIgl_RbSD0iuF439YJgGKEXMtnbbAwwgg9A2/exec';
 
 /* Expose globally */
 window.CLINIC = CLINIC;
