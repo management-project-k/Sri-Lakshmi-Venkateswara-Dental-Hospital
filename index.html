@@ -1,137 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sri Lakshmi Venkateswara Dental Hospital | Premium Dental Care in Proddatur</title>
-    <meta
-      name="description"
-      content="Sri Lakshmi Venkateswara Dental Hospital in Proddatur offers comfortable dental care, Root Canal Treatment, zirconia crowns, extractions, scaling, and modern hygiene-focused dentistry."
-    />
-    <meta property="og:title" content="Sri Lakshmi Venkateswara Dental Hospital" />
-    <meta property="og:description" content="Premium super speciality dental care in Proddatur, Andhra Pradesh." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/img/hero-clinic.svg" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Dentist","name":"Sri Lakshmi Venkateswara Dental Hospital","areaServed":"Proddatur","address":{"@type":"PostalAddress","streetAddress":"Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet","addressLocality":"Proddatur","addressRegion":"Andhra Pradesh","postalCode":"516360","addressCountry":"IN"},"telephone":"+91 90522 77769","openingHours":["Mo-Su 09:00-21:00"]}
-    </script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="index.html"><strong data-clinic="name"></strong><small>Super Speciality Dental Hospital</small></a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="book.html">Book</a>
-        </nav>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Lakshmi Venkateswara Dental Hospital — Premium Dental Care in Proddatur</title>
+  <meta name="description"
+    content="Sri Lakshmi Venkateswara Dental Hospital — Proddatur's trusted dental clinic. Painless root canals, zirconia crowns, implants, and cosmetic dentistry by Dr. Rajasekhar Yadav. Book your appointment today.">
+  <meta name="keywords"
+    content="dental clinic Proddatur, dentist Proddatur, root canal, zirconia crown, dental implants, teeth whitening, Dr Rajasekhar Yadav">
+  <meta property="og:title" content="Sri Lakshmi Venkateswara Dental Hospital">
+  <meta property="og:description"
+    content="Premium dental care in Proddatur. Painless procedures, caring staff, and advanced treatments. Book online today.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/hero-dental.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Sri Lakshmi Venkateswara Dental Hospital",
+    "alternateName": "Sri Lakshmi Venkateshwara Super Speciality Dental Hospital",
+    "image": "assets/img/hero-dental.jpg",
+    "telephone": "+919052277769",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet",
+      "addressLocality": "Proddatur",
+      "addressRegion": "Andhra Pradesh",
+      "postalCode": "516360",
+      "addressCountry": "IN"
+    },
+    "areaServed": "Proddatur",
+    "openingHours": "Mo-Sa 09:00-21:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "97"
+    },
+    "priceRange": "₹1500+"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ====== Header ====== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Home">
+        <div class="header__logo-icon">SLV</div>
+        <div class="header__logo-text">
+          SLV Dental
+          <span>Proddatur</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+          <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li class="nav__book"><a href="book.html" class="btn btn--primary btn--sm">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== Hero ====== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/img/hero-dental.jpg" alt="" class="hero__bg-img" loading="eager" width="1920" height="1080">
+      <div class="hero__bg-overlay"></div>
+    </div>
+
+    <div class="container hero__content">
+      <div class="hero__tag">🦷 Trusted Dental Care in Proddatur</div>
+      <h1 class="hero__title">Your Smile Deserves <em>Exceptional</em> Care</h1>
+      <p class="hero__subtitle">Experience painless, comfortable dental treatments in a clean, modern clinic. Trusted by
+        hundreds of patients in Proddatur and beyond.</p>
+      <div class="btn-group">
+        <a href="book.html" class="btn btn--primary btn--lg">Book Appointment</a>
+        <a href="tel:+919052277769" class="btn btn--outline btn--lg">📞 Call Now</a>
+        <a href="https://wa.me/919052277769?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment."
+          target="_blank" rel="noopener" class="btn btn--white btn--lg">💬 WhatsApp</a>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-inner reveal">
-          <p class="eyebrow">Proddatur, Andhra Pradesh</p>
-          <h1><span data-clinic="name"></span></h1>
-          <p>Calm, ethical and precision-focused dental care with modern hygiene standards, clear treatment guidance, and patient-first comfort at every step.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="book.html">Book Appointment</a>
-            <a class="btn btn-secondary" data-link="tel" href="#">Call Now</a>
-            <a class="btn btn-secondary" data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-          <div class="trust-row">
-            <div class="trust-item"><strong>Google 5.0</strong><small>as per platform: <span data-clinic="google-count"></span> reviews</small></div>
-            <div class="trust-item"><strong>Justdial 5.0</strong><small>as per platform: <span data-clinic="justdial-count"></span> ratings</small></div>
-            <div class="trust-item"><strong>Indicative</strong><small data-clinic="pricing"></small></div>
-            <div class="trust-item"><strong>Hygiene</strong><small>Clean and sterilized setup</small></div>
-            <div class="trust-item"><strong>Comfort</strong><small>Painless-first approach</small></div>
+    <div class="hero__visual" aria-hidden="true">
+      <img src="assets/img/dentist-work.jpg" alt="Dentist at work" loading="eager" width="560" height="560">
+    </div>
+  </section>
+
+  <!-- ====== Trust Bar ====== -->
+  <section class="trust-bar" id="trust-bar">
+    <div class="container">
+      <div class="trust-bar__grid">
+        <div class="trust-item reveal">
+          <div class="trust-item__icon trust-item__icon--google">⭐</div>
+          <div class="trust-item__info">
+            <strong><span data-count="5.0">0</span> on Google</strong>
+            <span><span data-count="97">0</span> reviews (as per platform)</span>
           </div>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="container grid services-grid">
-          <a class="service-item reveal" href="services.html#bonding"><h3>Bonding</h3><p>Fast repair for chipped or shaped teeth.</p></a>
-          <a class="service-item reveal" href="services.html#checkups"><h3>Check-ups</h3><p>Preventive exams and personalized oral plans.</p></a>
-          <a class="service-item reveal" href="services.html#cosmetic"><h3>Cosmetic Procedures</h3><p>Natural smile design and teeth whitening.</p></a>
-          <a class="service-item reveal" href="services.html#implants"><h3>Dental Implants</h3><p>Stable and functional tooth replacement.</p></a>
-          <a class="service-item reveal" href="services.html#bridges"><h3>Dentures & Bridges</h3><p>Reliable restoration for missing teeth.</p></a>
-          <a class="service-item reveal" href="services.html#extractions"><h3>Extractions</h3><p>Including wisdom tooth extraction.</p></a>
-          <a class="service-item reveal" href="services.html#fillings"><h3>Fillings & Sealants</h3><p>Protective care for decay-prone teeth.</p></a>
-          <a class="service-item reveal" href="services.html#laser"><h3>Laser Dentistry</h3><p>Precise, minimally invasive procedures.</p></a>
-          <a class="service-item reveal" href="services.html#guards"><h3>Mouth Guards</h3><p>Custom protection for grinding or sports.</p></a>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container split">
-          <div class="reveal">
-            <p class="eyebrow">Why Patients Choose Us</p>
-            <h2>Built around comfort, clarity, and clinical confidence</h2>
-            <ul class="list">
-              <li>Friendly team and supportive chairside experience.</li>
-              <li>Care pathways designed to minimize discomfort.</li>
-              <li>Strong cleanliness and hygiene routines throughout.</li>
-              <li>Clear treatment explanations and calm communication.</li>
-              <li>Reasonable pricing with transparent options.</li>
-            </ul>
-          </div>
-          <div class="media reveal">
-            <img src="assets/img/interior.svg" srcset="assets/img/interior.svg 1x, assets/img/interior.svg 2x" alt="Clinic interior" loading="lazy" width="1200" height="800" />
+        <div class="trust-item reveal reveal-delay-1">
+          <div class="trust-item__icon trust-item__icon--justdial">⭐</div>
+          <div class="trust-item__info">
+            <strong><span data-count="5.0">0</span> on Justdial</strong>
+            <span><span data-count="204">0</span> ratings (as per platform)</span>
           </div>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="container split">
-          <div class="media reveal">
-            <img src="assets/img/dentist-work.svg" srcset="assets/img/dentist-work.svg 1x, assets/img/dentist-work.svg 2x" alt="Dentist at work" loading="lazy" width="1200" height="800" />
-          </div>
-          <div class="reveal">
-            <p class="eyebrow">Popular Treatments</p>
-            <h2>Most requested treatments in our clinic</h2>
-            <ul class="list">
-              <li>Root Canal Treatment (RCT)</li>
-              <li>Zirconia crowns and caps</li>
-              <li>Wisdom tooth extraction</li>
-              <li>Cleaning and scaling</li>
-              <li>Tooth removal and fillings</li>
-            </ul>
+        <div class="trust-item reveal reveal-delay-2">
+          <div class="trust-item__icon trust-item__icon--price">💰</div>
+          <div class="trust-item__info">
+            <strong>Starting ₹1,500</strong>
+            <span>Indicative pricing</span>
           </div>
         </div>
-      </section>
+        <div class="trust-item reveal reveal-delay-3">
+          <div class="trust-item__icon trust-item__icon--hygiene">✨</div>
+          <div class="trust-item__info">
+            <strong>Strict Hygiene</strong>
+            <span>Clean &amp; sterilized</span>
+          </div>
+        </div>
+        <div class="trust-item reveal reveal-delay-4">
+          <div class="trust-item__icon trust-item__icon--comfort">💖</div>
+          <div class="trust-item__info">
+            <strong>Comfortable Care</strong>
+            <span>Gentle &amp; painless</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section class="section">
-        <div class="container split">
-          <div class="reveal">
-            <p class="eyebrow">Location</p>
-            <h2>Easy to reach in Holmes Pet, Proddatur</h2>
-            <p data-clinic="address"></p>
-            <p style="margin-top: 0.7rem"><strong data-clinic="hours"></strong></p>
-            <div class="cta-row" style="margin-top: 1rem">
-              <a class="btn btn-secondary" data-link="dir" href="#" target="_blank" rel="noopener">Get Directions</a>
-              <a class="btn btn-primary" href="book.html">Book Visit</a>
+  <!-- ====== Services Grid ====== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">What We Offer</span>
+        <h2>Our Services</h2>
+        <p class="section__subtitle">Comprehensive dental solutions to keep your smile healthy, bright, and confident.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <a href="services.html#bonding" class="card reveal">
+          <div class="card__icon">🔗</div>
+          <h3 class="card__title">Bonding</h3>
+          <p class="card__text">Repair chipped or discoloured teeth with natural-looking dental bonding.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#checkups" class="card reveal reveal-delay-1">
+          <div class="card__icon">🩺</div>
+          <h3 class="card__title">Check-ups</h3>
+          <p class="card__text">Regular examinations to catch issues early and keep your oral health on track.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#cosmetic" class="card reveal reveal-delay-2">
+          <div class="card__icon">✨</div>
+          <h3 class="card__title">Cosmetic Dentistry</h3>
+          <p class="card__text">Teeth whitening, veneers, and smile makeovers for a radiant appearance.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#implants" class="card reveal reveal-delay-3">
+          <div class="card__icon">🦷</div>
+          <h3 class="card__title">Dental Implants</h3>
+          <p class="card__text">Permanent, natural-looking tooth replacements that restore full function.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#dentures" class="card reveal">
+          <div class="card__icon">🫧</div>
+          <h3 class="card__title">Dentures &amp; Bridges</h3>
+          <p class="card__text">Custom-fitted prosthetics for a complete, comfortable smile.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#extractions" class="card reveal reveal-delay-1">
+          <div class="card__icon">🔧</div>
+          <h3 class="card__title">Extractions</h3>
+          <p class="card__text">Safe, painless tooth and wisdom tooth removal by experienced hands.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#fillings" class="card reveal reveal-delay-2">
+          <div class="card__icon">🛡️</div>
+          <h3 class="card__title">Fillings &amp; Sealants</h3>
+          <p class="card__text">Durable cavity restoration and preventive sealants for lasting protection.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#laser" class="card reveal reveal-delay-3">
+          <div class="card__icon">💡</div>
+          <h3 class="card__title">Laser Dentistry</h3>
+          <p class="card__text">Minimally invasive procedures with precision lasers for faster healing.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+        <a href="services.html#mouthguards" class="card reveal">
+          <div class="card__icon">🏅</div>
+          <h3 class="card__title">Mouth Guards</h3>
+          <p class="card__text">Custom-moulded guards for sports protection and teeth grinding relief.</p>
+          <span class="card__link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Why Patients Choose Us ====== -->
+  <section class="section section--alt" id="why-us">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Why Choose Us</span>
+        <h2>Why Patients Trust Us</h2>
+        <p class="section__subtitle">Based on what our patients consistently value about their experience.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="why-item__icon">😊</div>
+          <div>
+            <h4 class="why-item__title">Friendly &amp; Supportive Staff</h4>
+            <p class="why-item__text">Our team creates a warm, welcoming environment from the moment you walk in.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-1">
+          <div class="why-item__icon">💆</div>
+          <div>
+            <h4 class="why-item__title">Painless Procedures</h4>
+            <p class="why-item__text">Gentle techniques and modern anaesthetics ensure a comfortable, stress-free visit.
+            </p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-2">
+          <div class="why-item__icon">🧼</div>
+          <div>
+            <h4 class="why-item__title">Impeccable Hygiene</h4>
+            <p class="why-item__text">Strict sterilization protocols and a spotless clinic environment you can trust.
+            </p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-3">
+          <div class="why-item__icon">💬</div>
+          <div>
+            <h4 class="why-item__title">Clear Communication</h4>
+            <p class="why-item__text">Dr. Rajasekhar Yadav explains every procedure patiently and transparently.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-item__icon">💵</div>
+          <div>
+            <h4 class="why-item__title">Affordable Pricing</h4>
+            <p class="why-item__text">Quality dental care at reasonable rates — no hidden costs, no surprises.</p>
+          </div>
+        </div>
+        <div class="why-item reveal reveal-delay-1">
+          <div class="why-item__icon">🏆</div>
+          <div>
+            <h4 class="why-item__title">Proven Results</h4>
+            <p class="why-item__text">Excellent outcomes across root canals, crowns, extractions, and cosmetic work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Popular Treatments ====== -->
+  <section class="section" id="treatments">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Most Requested</span>
+        <h2>Popular Treatments</h2>
+        <p class="section__subtitle">The treatments our patients seek most — delivered with precision and care.</p>
+      </div>
+
+      <div class="treatments-grid">
+        <div class="card treatment-card reveal">
+          <div class="card__icon">🦷</div>
+          <h3 class="card__title">Root Canal Treatment</h3>
+          <p class="card__text">Save your natural tooth with our painless, precise RCT procedures.</p>
+        </div>
+        <div class="card treatment-card reveal reveal-delay-1">
+          <div class="card__icon">👑</div>
+          <h3 class="card__title">Zirconia Crowns</h3>
+          <p class="card__text">Premium, natural-looking zirconia caps for long-lasting restoration.</p>
+        </div>
+        <div class="card treatment-card reveal reveal-delay-2">
+          <div class="card__icon">🔧</div>
+          <h3 class="card__title">Wisdom Tooth Extraction</h3>
+          <p class="card__text">Expert removal of impacted wisdom teeth — minimal discomfort, quick recovery.</p>
+        </div>
+        <div class="card treatment-card reveal reveal-delay-3">
+          <div class="card__icon">🪥</div>
+          <h3 class="card__title">Cleaning &amp; Scaling</h3>
+          <p class="card__text">Professional deep cleaning to remove plaque, tartar, and prevent gum disease.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Location Preview ====== -->
+  <section class="section section--alt" id="location">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Find Us</span>
+        <h2>Our Location</h2>
+        <p class="section__subtitle">Conveniently located in Holmes Pet, Proddatur — easy to find and accessible.</p>
+      </div>
+
+      <div class="reveal" style="display:grid; grid-template-columns: 1fr 1fr; gap:var(--sp-8); align-items:center;">
+        <div>
+          <p style="margin-bottom:var(--sp-4); font-size:var(--fs-md);">
+            <strong>Sri Lakshmi Venkateswara Dental Hospital</strong>
+          </p>
+          <p style="margin-bottom:var(--sp-4); color:var(--clr-text-muted);">
+            Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet, Proddatur, Andhra Pradesh 516360
+          </p>
+          <p style="margin-bottom:var(--sp-4); color:var(--clr-text-muted);">
+            📞 <a href="tel:+919052277769">+91 90522 77769</a>
+          </p>
+          <p style="margin-bottom:var(--sp-6); color:var(--clr-text-muted);">
+            🕐 Mon–Sat: 9:00 AM – 9:00 PM
+          </p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Sri+Lakshmi+Venkateswara+Dental+Hospital+Proddatur"
+            target="_blank" rel="noopener" class="btn btn--primary">Get Directions →</a>
+        </div>
+        <div class="map-placeholder" id="map-area">
+          <iframe title="Clinic location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.0!2d78.55!3d14.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sin!4v1700000000000"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA Section ====== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <h2 class="reveal">Ready for a Healthier Smile?</h2>
+      <p class="reveal reveal-delay-1">Book your appointment today or reach out to us — we're here to help you smile
+        confidently.</p>
+      <div class="btn-group reveal reveal-delay-2" style="justify-content:center;">
+        <a href="book.html" class="btn btn--primary btn--lg">Book Appointment</a>
+        <a href="tel:+919052277769" class="btn btn--white btn--lg">📞 Call Now</a>
+        <a href="https://wa.me/919052277769?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment."
+          target="_blank" rel="noopener" class="btn btn--outline btn--lg"
+          style="border-color:var(--clr-teal-300); color:var(--clr-teal-300);">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo" style="color:var(--clr-white);">
+            <div class="header__logo-icon">SLV</div>
+            <div class="header__logo-text">
+              SLV Dental
+              <span style="color:var(--clr-gray-400);">Proddatur</span>
             </div>
-          </div>
-          <div class="map-placeholder reveal">
-            <p>Map loads on demand for performance.</p>
-            <a class="btn btn-secondary" data-link="dir" href="#" target="_blank" rel="noopener">Open Map</a>
-          </div>
+          </a>
+          <p>Sri Lakshmi Venkateswara Dental Hospital — providing gentle, expert dental care in Proddatur since day one.
+            Your smile is our priority.</p>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div><strong data-clinic="name"></strong><p data-clinic="address"></p><p><a data-link="tel" href="#" data-clinic="phone"></a></p></div>
-        <div><strong>Quick Links</strong><p><a href="services.html">Services</a> | <a href="book.html">Book</a> | <a href="reviews.html">Reviews</a></p></div>
-        <div><strong>Hours</strong><p data-clinic="hours"></p><small>Alt name: <span data-clinic="alt-name"></span></small></div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="book.html">Book Online</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Treatments</h4>
+          <ul class="footer__links">
+            <li><a href="services.html#rct">Root Canal</a></li>
+            <li><a href="services.html#cosmetic">Teeth Whitening</a></li>
+            <li><a href="services.html#implants">Dental Implants</a></li>
+            <li><a href="services.html#extractions">Extractions</a></li>
+            <li><a href="services.html#fillings">Fillings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact</h4>
+          <ul class="footer__links">
+            <li>📞 <a href="tel:+919052277769">+91 90522 77769</a></li>
+            <li>📍 Holmes Pet Rd, Proddatur</li>
+            <li>🕐 Mon–Sat 9 AM – 9 PM</li>
+            <li><a href="https://wa.me/919052277769" target="_blank" rel="noopener">💬 WhatsApp Us</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="container"><small>© <span id="year"></span> <span data-clinic="name"></span></small></div>
-    </footer>
+      <div class="footer__bottom">
+        <span>© 2025 Sri Lakshmi Venkateswara Dental Hospital. All rights reserved.</span>
+        <span>Holmes Pet Rd, Proddatur, AP 516360 · +91 90522 77769</span>
+      </div>
+    </div>
+  </footer>
 
-    <div class="mobile-bar"><a data-link="tel" href="#">Call</a><a data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="book.html">Book</a></div>
-    <script type="module" src="assets/js/main.js"></script>
-  </body>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

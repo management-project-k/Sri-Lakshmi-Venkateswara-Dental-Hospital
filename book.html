@@ -1,43 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Appointment | Sri Lakshmi Venkateswara Dental Hospital</title>
-    <meta name="description" content="Book a dental appointment with Sri Lakshmi Venkateswara Dental Hospital using a smooth, Google Sheets-powered booking flow." />
-    <meta property="og:title" content="Book Appointment - Sri Lakshmi Venkateswara Dental Hospital" />
-    <meta property="og:description" content="Choose service, date, and slot. Submit in seconds." />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Dentist","name":"Sri Lakshmi Venkateswara Dental Hospital","areaServed":"Proddatur","address":{"@type":"PostalAddress","streetAddress":"Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet","addressLocality":"Proddatur","addressRegion":"Andhra Pradesh","postalCode":"516360","addressCountry":"IN"},"telephone":"+91 90522 77769","openingHours":["Mo-Su 09:00-21:00"]}
-    </script>
-  </head>
-  <body>
-    <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><strong data-clinic="name"></strong><small>Super Speciality Dental Hospital</small></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="book.html" aria-current="page">Book</a></nav></div></header>
-    <main>
-      <section class="section"><div class="container"><p class="eyebrow">Appointment Booking</p><h1>Simple 4-step booking flow</h1><p>For urgent support, call <span id="clinicPhoneBook"></span>.</p><div class="steps" style="margin-top:1rem"><div class="step active">1. Service</div><div class="step">2. Date</div><div class="step">3. Slot</div><div class="step">4. Details</div></div></div></section>
-      <section class="section"><div class="container"><form class="form-grid" id="bookingForm" novalidate>
-        <select id="service_id" name="service_id" required aria-label="Select service"></select>
-        <input id="date" name="date" type="date" required />
-        <div id="slotsWrap" class="slots"></div>
-        <p id="slotStatus">Select service and date to view slots.</p>
-        <button type="button" class="btn btn-secondary hide" id="retrySlots">Retry slots</button>
-        <input name="patient_name" type="text" required placeholder="Patient full name" autocomplete="name" />
-        <input name="phone" type="tel" required placeholder="Phone number" inputmode="tel" autocomplete="tel" />
-        <input name="email" type="email" placeholder="Email (optional)" autocomplete="email" />
-        <textarea name="notes" placeholder="Notes (optional)"></textarea>
-        <input class="hide" name="website" type="text" tabindex="-1" autocomplete="off" />
-        <label><input type="checkbox" name="consent" value="yes" required /> I consent to be contacted for appointment confirmation.</label>
-        <button class="btn btn-primary" id="submitBtn" type="submit">Confirm Appointment</button>
-        <small id="submitHint"></small>
-      </form>
-      <article class="service-item hide" id="successCard"><h2>Appointment request submitted</h2><p>Your booking ID: <strong id="bookingId"></strong></p><p>Our team will call or message you to confirm shortly.</p><div class="cta-row"><a class="btn btn-secondary" href="index.html">Back to Home</a><a class="btn btn-primary" data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp Clinic</a></div></article>
-      </div></section>
-    </main>
-    <footer class="footer"><div class="container footer-grid"><div><strong data-clinic="name"></strong><p data-clinic="address"></p><p><a data-link="tel" href="#" data-clinic="phone"></a></p></div><div><strong>Quick Links</strong><p><a href="services.html">Services</a> | <a href="book.html">Book</a> | <a href="reviews.html">Reviews</a></p></div><div><strong>Hours</strong><p data-clinic="hours"></p><small>Alt name: <span data-clinic="alt-name"></span></small></div></div><div class="container"><small>© <span id="year"></span> <span data-clinic="name"></span></small></div></footer>
-    <div class="mobile-bar"><a data-link="tel" href="#">Call</a><a data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="book.html">Book</a></div>
-    <script type="module" src="assets/js/main.js"></script>
-    <script type="module" src="assets/js/book.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment — Sri Lakshmi Venkateswara Dental Hospital, Proddatur</title>
+    <meta name="description"
+        content="Book your dental appointment online at SLV Dental Hospital, Proddatur. Choose a service, pick a time, and confirm — quick and easy.">
+    <meta property="og:title" content="Book Appointment — SLV Dental Hospital">
+    <meta property="og:description" content="Book your dental appointment online. Quick, easy, no hassle.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Home">
+                <div class="header__logo-icon">SLV</div>
+                <div class="header__logo-text">SLV Dental<span>Proddatur</span></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="main-nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+                    <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__book"><a href="book.html" class="btn btn--primary btn--sm">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== Page Header ====== -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section__tag">Online Booking</span>
+            <h1>Book Your Appointment</h1>
+            <p>Choose a service, pick a slot, and confirm — it takes less than 2 minutes.</p>
+        </div>
+    </section>
+
+    <!-- ====== Booking Form ====== -->
+    <section class="section" id="booking">
+        <div class="container" style="max-width:680px;">
+
+            <!-- Step indicators -->
+            <div class="booking-steps" id="booking-steps">
+                <div class="booking-step is-active" data-step="1">
+                    <span class="booking-step__num">1</span>
+                    <span class="booking-step__label">Service</span>
+                </div>
+                <div class="booking-step__connector"></div>
+                <div class="booking-step" data-step="2">
+                    <span class="booking-step__num">2</span>
+                    <span class="booking-step__label">Date</span>
+                </div>
+                <div class="booking-step__connector"></div>
+                <div class="booking-step" data-step="3">
+                    <span class="booking-step__num">3</span>
+                    <span class="booking-step__label">Time</span>
+                </div>
+                <div class="booking-step__connector"></div>
+                <div class="booking-step" data-step="4">
+                    <span class="booking-step__num">4</span>
+                    <span class="booking-step__label">Details</span>
+                </div>
+            </div>
+
+            <!-- Form wrapper -->
+            <div id="booking-form-wrapper">
+                <form id="booking-form" class="card" style="padding:var(--sp-10); position:relative;" novalidate>
+
+                    <!-- Step 1: Service -->
+                    <div class="step-panel is-active" data-panel="1">
+                        <h2 style="font-size:var(--fs-xl); margin-bottom:var(--sp-2);">Select a Service</h2>
+                        <p class="text-muted" style="margin-bottom:var(--sp-6); font-size:var(--fs-sm);">Choose the
+                            treatment you need. If unsure, select "Check-up" and we'll guide you.</p>
+                        <div class="form-group">
+                            <label for="bs-service" class="form-label">Service</label>
+                            <select id="bs-service" name="service" class="form-control" required>
+                                <option value="">Loading services…</option>
+                            </select>
+                            <p class="form-error">Please select a service</p>
+                        </div>
+                        <div style="display:flex; justify-content:flex-end; margin-top:var(--sp-6);">
+                            <button type="button" class="btn btn--primary" data-step-next="2">Continue →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Date -->
+                    <div class="step-panel" data-panel="2">
+                        <h2 style="font-size:var(--fs-xl); margin-bottom:var(--sp-2);">Choose a Date</h2>
+                        <p class="text-muted" style="margin-bottom:var(--sp-6); font-size:var(--fs-sm);">Pick a day that
+                            works for you. We're open Monday–Saturday, 9 AM – 9 PM.</p>
+                        <div class="form-group">
+                            <label for="bs-date" class="form-label">Preferred Date</label>
+                            <input type="date" id="bs-date" name="date" class="form-control" required>
+                            <p class="form-error">Please choose a date</p>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-top:var(--sp-6);">
+                            <button type="button" class="btn btn--ghost" data-step-prev="1">← Back</button>
+                            <button type="button" class="btn btn--primary" data-step-next="3">Continue →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Time Slot -->
+                    <div class="step-panel" data-panel="3">
+                        <h2 style="font-size:var(--fs-xl); margin-bottom:var(--sp-2);">Pick a Time Slot</h2>
+                        <p class="text-muted" style="margin-bottom:var(--sp-6); font-size:var(--fs-sm);">Select an
+                            available slot for your visit.</p>
+                        <div id="slots-container" style="display:none;">
+                            <div id="slots-grid" class="slots-grid"></div>
+                        </div>
+                        <p class="text-muted" style="margin-top:var(--sp-4); font-size:var(--fs-sm);">
+                            Selected: <strong id="selected-slot">—</strong>
+                        </p>
+                        <div style="display:flex; justify-content:space-between; margin-top:var(--sp-6);">
+                            <button type="button" class="btn btn--ghost" data-step-prev="2">← Back</button>
+                            <button type="button" class="btn btn--primary" data-step-next="4">Continue →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Patient Details -->
+                    <div class="step-panel" data-panel="4">
+                        <h2 style="font-size:var(--fs-xl); margin-bottom:var(--sp-2);">Your Details</h2>
+                        <p class="text-muted" style="margin-bottom:var(--sp-6); font-size:var(--fs-sm);">Almost done!
+                            Fill in your contact information below.</p>
+
+                        <div class="form-group">
+                            <label for="bs-name" class="form-label">Full Name *</label>
+                            <input type="text" id="bs-name" name="patient_name" class="form-control"
+                                placeholder="Your full name" required autocomplete="name" minlength="2">
+                            <p class="form-error">Name is required</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bs-phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="bs-phone" name="phone" class="form-control"
+                                placeholder="+91 XXXXX XXXXX" required autocomplete="tel" inputmode="tel">
+                            <p class="form-error">Enter a valid phone number</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bs-email" class="form-label">Email <span
+                                    style="font-weight:400; color:var(--clr-gray-400);">(optional)</span></label>
+                            <input type="email" id="bs-email" name="email" class="form-control"
+                                placeholder="your@email.com" autocomplete="email" inputmode="email">
+                            <p class="form-error">Enter a valid email</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bs-notes" class="form-label">Notes <span
+                                    style="font-weight:400; color:var(--clr-gray-400);">(optional)</span></label>
+                            <textarea id="bs-notes" name="notes" class="form-control" rows="3"
+                                placeholder="Any specific concerns or questions?"></textarea>
+                        </div>
+
+                        <!-- Honeypot -->
+                        <div class="form-hp" aria-hidden="true">
+                            <label for="bs-hp">Leave blank</label>
+                            <input type="text" id="bs-hp" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-group" style="display:flex; align-items:flex-start; gap:var(--sp-3);">
+                            <input type="checkbox" id="bs-consent" name="consent"
+                                style="margin-top:3px; min-width:18px; min-height:18px;">
+                            <label for="bs-consent"
+                                style="font-size:var(--fs-sm); color:var(--clr-text-muted); cursor:pointer;">
+                                I consent to sharing my details for appointment booking and agree to be contacted by the
+                                clinic regarding my visit.
+                            </label>
+                        </div>
+
+                        <div style="display:flex; justify-content:space-between; margin-top:var(--sp-6);">
+                            <button type="button" class="btn btn--ghost" data-step-prev="3">← Back</button>
+                            <button type="submit" id="bs-submit" class="btn btn--primary btn--lg">Confirm
+                                Booking</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Confirmation Card -->
+            <div id="booking-confirmation" style="display:none;">
+                <div class="card confirmation-card">
+                    <div class="confirmation-card__icon">✓</div>
+                    <h3>Appointment Booked!</h3>
+                    <p>Your appointment has been confirmed. Here are the details:</p>
+                    <div class="booking-id" id="conf-booking-id">—</div>
+                    <div style="text-align:left; margin-top:var(--sp-6); font-size:var(--fs-sm);">
+                        <p style="margin-bottom:var(--sp-2);"><strong>Service:</strong> <span id="conf-service">—</span>
+                        </p>
+                        <p style="margin-bottom:var(--sp-2);"><strong>Date:</strong> <span id="conf-date">—</span></p>
+                        <p style="margin-bottom:var(--sp-4);"><strong>Time:</strong> <span id="conf-time">—</span></p>
+                    </div>
+                    <div
+                        style="background:var(--clr-teal-50); padding:var(--sp-4); border-radius:var(--radius-md); margin-bottom:var(--sp-6);">
+                        <p style="font-size:var(--fs-sm); color:var(--clr-primary-dark);">
+                            <strong>What's next?</strong><br>
+                            We'll confirm your appointment via phone/WhatsApp. Please arrive 10 minutes before your
+                            slot. If you need to reschedule, call us at <a href="tel:+919052277769">+91 90522 77769</a>.
+                        </p>
+                    </div>
+                    <div class="btn-group" style="justify-content:center;">
+                        <a href="index.html" class="btn btn--outline">← Back to Home</a>
+                        <a href="tel:+919052277769" class="btn btn--primary">📞 Call Clinic</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== Footer ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="header__logo" style="color:var(--clr-white);">
+                        <div class="header__logo-icon">SLV</div>
+                        <div class="header__logo-text">SLV Dental<span
+                                style="color:var(--clr-gray-400);">Proddatur</span></div>
+                    </a>
+                    <p>Gentle, expert dental care in Proddatur.</p>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Treatments</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html#rct">Root Canal</a></li>
+                        <li><a href="services.html#implants">Dental Implants</a></li>
+                        <li><a href="services.html#extractions">Extractions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul class="footer__links">
+                        <li>📞 <a href="tel:+919052277769">+91 90522 77769</a></li>
+                        <li>📍 Holmes Pet Rd, Proddatur</li>
+                        <li>🕐 Mon–Sat 9 AM – 9 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2025 Sri Lakshmi Venkateswara Dental Hospital. All rights reserved.</span>
+                <span>Holmes Pet Rd, Proddatur, AP 516360 · +91 90522 77769</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/book.js"></script>
+</body>
+
 </html>

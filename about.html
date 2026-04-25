@@ -1,26 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Sri Lakshmi Venkateswara Dental Hospital</title>
-    <meta name="description" content="Meet Dr. Rajasekhar Yadav and the hygiene-first, patient-friendly care philosophy at Sri Lakshmi Venkateswara Dental Hospital, Proddatur." />
-    <meta property="og:title" content="About - Sri Lakshmi Venkateswara Dental Hospital" />
-    <meta property="og:description" content="Patient-first, ethical and modern super speciality dental care in Proddatur." />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Dentist","name":"Sri Lakshmi Venkateswara Dental Hospital","areaServed":"Proddatur","address":{"@type":"PostalAddress","streetAddress":"Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet","addressLocality":"Proddatur","addressRegion":"Andhra Pradesh","postalCode":"516360","addressCountry":"IN"},"telephone":"+91 90522 77769","openingHours":["Mo-Su 09:00-21:00"]}
-    </script>
-  </head>
-  <body>
-    <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><strong data-clinic="name"></strong><small>Super Speciality Dental Hospital</small></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav class="main-nav"><a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="book.html">Book</a></nav></div></header>
-    <main>
-      <section class="section"><div class="container split"><div class="reveal"><p class="eyebrow">About the Clinic</p><h1>Trusted care led by <span data-clinic="doctor"></span></h1><p>At <span data-clinic="name"></span>, every treatment is guided by clarity, ethics, comfort, and measurable outcomes. We prioritize long-term oral health and an anxiety-free environment for families in Proddatur.</p><p style="margin-top:0.8rem"><small>Also listed as: <span data-clinic="alt-name"></span></small></p></div><div class="media reveal"><img src="assets/img/interior.svg" alt="Modern clean dental clinic" loading="lazy" width="1200" height="800" /></div></div></section>
-      <section class="section"><div class="container split"><div class="reveal"><h2>Our Care Approach</h2><ul class="list"><li>Strict hygiene and sterilization workflow.</li><li>Comfort-first treatment planning and execution.</li><li>Calm explanation of diagnosis and options.</li><li>Ethical recommendation of only needed procedures.</li><li>Follow-up support after major procedures.</li></ul></div><div class="reveal timeline"><div><strong>Assessment</strong><p>Thorough examination and clear plan discussion.</p></div><div><strong>Treatment</strong><p>Precision-led dentistry focused on comfort.</p></div><div><strong>Follow-up</strong><p>Guidance for recovery, maintenance, and prevention.</p></div></div></div></section>
-    </main>
-    <footer class="footer"><div class="container footer-grid"><div><strong data-clinic="name"></strong><p data-clinic="address"></p><p><a data-link="tel" href="#" data-clinic="phone"></a></p></div><div><strong>Quick Links</strong><p><a href="services.html">Services</a> | <a href="book.html">Book</a> | <a href="reviews.html">Reviews</a></p></div><div><strong>Hours</strong><p data-clinic="hours"></p><small>Alt name: <span data-clinic="alt-name"></span></small></div></div><div class="container"><small>© <span id="year"></span> <span data-clinic="name"></span></small></div></footer>
-    <div class="mobile-bar"><a data-link="tel" href="#">Call</a><a data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="book.html">Book</a></div>
-    <script type="module" src="assets/js/main.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Sri Lakshmi Venkateswara Dental Hospital, Proddatur</title>
+    <meta name="description"
+        content="Learn about Dr. Rajasekhar Yadav and the team at Sri Lakshmi Venkateswara Dental Hospital. Our values: hygiene, comfort, transparency, and ethical dental care.">
+    <meta property="og:title" content="About — SLV Dental Hospital, Proddatur">
+    <meta property="og:description"
+        content="Meet Dr. Rajasekhar Yadav and learn about our commitment to gentle, ethical dental care.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Home">
+                <div class="header__logo-icon">SLV</div>
+                <div class="header__logo-text">SLV Dental<span>Proddatur</span></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="main-nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+                    <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__book"><a href="book.html" class="btn btn--primary btn--sm">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== Page Header ====== -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section__tag">About Us</span>
+            <h1>Our Story &amp; Values</h1>
+            <p>Building trust through transparent, comfortable, and ethical dental care — one smile at a time.</p>
+        </div>
+    </section>
+
+    <!-- ====== Doctor Profile ====== -->
+    <section class="section" id="doctor">
+        <div class="container">
+            <div class="doctor-card reveal">
+                <div class="doctor-card__img">
+                    <img src="assets/img/dentist-portrait.jpg" alt="Dr. Rajasekhar Yadav" loading="lazy" width="280"
+                        height="373">
+                </div>
+                <div>
+                    <span class="section__tag">Lead Dentist</span>
+                    <h2>Dr. Rajasekhar Yadav</h2>
+                    <p style="margin:var(--sp-4) 0; color:var(--clr-text-muted); font-size:var(--fs-md);">
+                        Dr. Rajasekhar Yadav leads Sri Lakshmi Venkateswara Dental Hospital with a patient-first
+                        philosophy. Known for his calm demeanor and clear explanations, he ensures every patient
+                        understands their treatment plan before proceeding.
+                    </p>
+                    <p style="margin-bottom:var(--sp-4); color:var(--clr-text-muted);">
+                        With expertise spanning root canal therapy, zirconia restorations, dental implants, laser
+                        dentistry, and cosmetic procedures, Dr. Yadav combines clinical precision with genuine care.
+                    </p>
+                    <p style="margin-bottom:var(--sp-6); color:var(--clr-text-muted);">
+                        His approach is simple: listen carefully, explain clearly, treat gently, and deliver results
+                        that last.
+                    </p>
+                    <div class="btn-group">
+                        <a href="book.html" class="btn btn--primary">Book an Appointment</a>
+                        <a href="contact.html" class="btn btn--outline">Contact Us</a>
+                    </div>
+                    <p class="alt-name" style="margin-top:var(--sp-6);">
+                        Also known as: Sri Lakshmi Venkateshwara Super Speciality Dental Hospital
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Our Approach ====== -->
+    <section class="section section--alt" id="approach">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__tag">Our Approach</span>
+                <h2>What We Stand For</h2>
+                <p class="section__subtitle">Every decision we make is guided by these core principles.</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="card reveal">
+                    <div class="card__icon">🧼</div>
+                    <h3 class="card__title">Hygiene First</h3>
+                    <p class="card__text">We follow rigorous sterilization and infection-control protocols. Every
+                        instrument is autoclaved, every surface disinfected. Your safety is non-negotiable.</p>
+                </div>
+                <div class="card reveal reveal-delay-1">
+                    <div class="card__icon">💆</div>
+                    <h3 class="card__title">Patient Comfort</h3>
+                    <p class="card__text">We understand dental anxiety. Our approach prioritizes gentle handling,
+                        effective anaesthesia, and a calm environment so you feel at ease at every step.</p>
+                </div>
+                <div class="card reveal reveal-delay-2">
+                    <div class="card__icon">💬</div>
+                    <h3 class="card__title">Clear Explanation</h3>
+                    <p class="card__text">No medical jargon, no rushed consultations. Dr. Yadav takes the time to
+                        explain your condition, options, and expected outcomes in plain language.</p>
+                </div>
+                <div class="card reveal reveal-delay-3">
+                    <div class="card__icon">⚖️</div>
+                    <h3 class="card__title">Ethical Practice</h3>
+                    <p class="card__text">We recommend only what's needed — no unnecessary procedures, no inflated
+                        billing. Honest diagnostics and transparent pricing are our standard.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card__icon">🎯</div>
+                    <h3 class="card__title">Precision &amp; Skill</h3>
+                    <p class="card__text">From intricate root canal work to detailed zirconia restorations, we bring
+                        technical excellence to every procedure we perform.</p>
+                </div>
+                <div class="card reveal reveal-delay-1">
+                    <div class="card__icon">🤝</div>
+                    <h3 class="card__title">Lasting Relationships</h3>
+                    <p class="card__text">Many of our patients have been with us for years. We build trust through
+                        consistent care, follow-ups, and genuine concern for your well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Timeline ====== -->
+    <section class="section" id="journey">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__tag">Our Journey</span>
+                <h2>Milestones</h2>
+            </div>
+
+            <div style="max-width:640px; margin-inline:auto;">
+                <div class="why-item reveal" style="margin-bottom:var(--sp-8);">
+                    <div class="why-item__icon">🏥</div>
+                    <div>
+                        <h4 class="why-item__title">Clinic Founded</h4>
+                        <p class="why-item__text">Sri Lakshmi Venkateswara Dental Hospital opens its doors in Proddatur,
+                            committed to making quality dental care accessible to the community.</p>
+                    </div>
+                </div>
+                <div class="why-item reveal reveal-delay-1" style="margin-bottom:var(--sp-8);">
+                    <div class="why-item__icon">⭐</div>
+                    <div>
+                        <h4 class="why-item__title">5.0 Google Rating</h4>
+                        <p class="why-item__text">Achieved a perfect 5.0 rating on Google with 97 reviews — a testament
+                            to consistent patient satisfaction.</p>
+                    </div>
+                </div>
+                <div class="why-item reveal reveal-delay-2" style="margin-bottom:var(--sp-8);">
+                    <div class="why-item__icon">🏆</div>
+                    <div>
+                        <h4 class="why-item__title">200+ Justdial Ratings</h4>
+                        <p class="why-item__text">Surpassed 200 ratings on Justdial with a perfect score, reflecting
+                            deep trust from the Proddatur community.</p>
+                    </div>
+                </div>
+                <div class="why-item reveal reveal-delay-3">
+                    <div class="why-item__icon">💡</div>
+                    <div>
+                        <h4 class="why-item__title">Advanced Technology</h4>
+                        <p class="why-item__text">Adopted laser dentistry and premium zirconia restorations, staying at
+                            the forefront of modern dental care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="reveal">Experience the SLV Difference</h2>
+            <p class="reveal reveal-delay-1">Book your consultation today and discover why hundreds of patients trust us
+                with their smiles.</p>
+            <div class="btn-group reveal reveal-delay-2" style="justify-content:center;">
+                <a href="book.html" class="btn btn--primary btn--lg">Book Appointment</a>
+                <a href="tel:+919052277769" class="btn btn--white btn--lg">📞 Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Footer ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="header__logo" style="color:var(--clr-white);">
+                        <div class="header__logo-icon">SLV</div>
+                        <div class="header__logo-text">SLV Dental<span
+                                style="color:var(--clr-gray-400);">Proddatur</span></div>
+                    </a>
+                    <p>Sri Lakshmi Venkateswara Dental Hospital — gentle, expert dental care in Proddatur.</p>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="book.html">Book Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Treatments</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html#rct">Root Canal</a></li>
+                        <li><a href="services.html#cosmetic">Teeth Whitening</a></li>
+                        <li><a href="services.html#implants">Dental Implants</a></li>
+                        <li><a href="services.html#extractions">Extractions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul class="footer__links">
+                        <li>📞 <a href="tel:+919052277769">+91 90522 77769</a></li>
+                        <li>📍 Holmes Pet Rd, Proddatur</li>
+                        <li>🕐 Mon–Sat 9 AM – 9 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2025 Sri Lakshmi Venkateswara Dental Hospital. All rights reserved.</span>
+                <span>Holmes Pet Rd, Proddatur, AP 516360 · +91 90522 77769</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>

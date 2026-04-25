@@ -1,33 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery | Sri Lakshmi Venkateswara Dental Hospital</title>
-    <meta name="description" content="Explore clinic ambience and treatment environment through a fast-loading, accessible gallery." />
-    <meta property="og:title" content="Gallery - Sri Lakshmi Venkateswara Dental Hospital" />
-    <meta property="og:description" content="A modern, visual look at our clinic setting and care atmosphere." />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Dentist","name":"Sri Lakshmi Venkateswara Dental Hospital","areaServed":"Proddatur","address":{"@type":"PostalAddress","streetAddress":"Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet","addressLocality":"Proddatur","addressRegion":"Andhra Pradesh","postalCode":"516360","addressCountry":"IN"},"telephone":"+91 90522 77769","openingHours":["Mo-Su 09:00-21:00"]}
-    </script>
-  </head>
-  <body>
-    <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><strong data-clinic="name"></strong><small>Super Speciality Dental Hospital</small></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="gallery.html" aria-current="page">Gallery</a><a href="contact.html">Contact</a><a href="book.html">Book</a></nav></div></header>
-    <main>
-      <section class="section"><div class="container"><p class="eyebrow">Gallery</p><h1>Inside our clean and calm treatment environment</h1></div></section>
-      <section class="section"><div class="container"><div class="gallery" data-gallery>
-        <button data-full="assets/img/interior.svg" data-alt="Clinic interior"><img src="assets/img/interior.svg" alt="Clinic interior seating" loading="lazy" width="900" height="1200" /></button>
-        <button data-full="assets/img/dentist-work.svg" data-alt="Dentist consultation"><img src="assets/img/dentist-work.svg" alt="Dentist procedure setup" loading="lazy" width="900" height="1200" /></button>
-        <button data-full="assets/img/hero-clinic.svg" data-alt="Clinic building"><img src="assets/img/hero-clinic.svg" alt="Clinic overview" loading="lazy" width="900" height="1200" /></button>
-        <button data-full="assets/img/interior.svg" data-alt="Reception zone"><img src="assets/img/interior.svg" alt="Reception area" loading="lazy" width="900" height="1200" /></button>
-        <button data-full="assets/img/dentist-work.svg" data-alt="Patient care setup"><img src="assets/img/dentist-work.svg" alt="Patient chair setup" loading="lazy" width="900" height="1200" /></button>
-      </div></div></section>
-      <dialog class="lightbox" id="lightbox"><div class="lightbox-frame"><button class="btn btn-secondary lightbox-close" id="lightboxClose">Close</button><img id="lightboxImage" src="" alt="Gallery preview" /></div></dialog>
-    </main>
-    <footer class="footer"><div class="container footer-grid"><div><strong data-clinic="name"></strong><p data-clinic="address"></p><p><a data-link="tel" href="#" data-clinic="phone"></a></p></div><div><strong>Quick Links</strong><p><a href="services.html">Services</a> | <a href="book.html">Book</a> | <a href="reviews.html">Reviews</a></p></div><div><strong>Hours</strong><p data-clinic="hours"></p><small>Alt name: <span data-clinic="alt-name"></span></small></div></div><div class="container"><small>© <span id="year"></span> <span data-clinic="name"></span></small></div></footer>
-    <div class="mobile-bar"><a data-link="tel" href="#">Call</a><a data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="book.html">Book</a></div>
-    <script type="module" src="assets/js/main.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Sri Lakshmi Venkateswara Dental Hospital, Proddatur</title>
+    <meta name="description"
+        content="View photos of SLV Dental Hospital — our clean, modern clinic interiors, equipment, and team. Located in Proddatur.">
+    <meta property="og:title" content="Gallery — SLV Dental Hospital">
+    <meta property="og:description" content="Take a visual tour of our dental clinic in Proddatur.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Home">
+                <div class="header__logo-icon">SLV</div>
+                <div class="header__logo-text">SLV Dental<span>Proddatur</span></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="main-nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+                    <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__book"><a href="book.html" class="btn btn--primary btn--sm">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== Page Header ====== -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section__tag">Gallery</span>
+            <h1>Our Clinic in Photos</h1>
+            <p>A visual tour of our clean, modern dental facility.</p>
+        </div>
+    </section>
+
+    <!-- ====== Gallery ====== -->
+    <section class="section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="assets/img/gallery-1.jpg" alt="Clinic reception area" loading="lazy" width="600"
+                        height="400">
+                </div>
+                <div class="gallery-item reveal reveal-delay-1">
+                    <img src="assets/img/gallery-2.jpg" alt="Modern dental chair and equipment" loading="lazy"
+                        width="600" height="500">
+                </div>
+                <div class="gallery-item reveal reveal-delay-2">
+                    <img src="assets/img/gallery-3.jpg" alt="Sterilization area" loading="lazy" width="600"
+                        height="350">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/img/gallery-4.jpg" alt="Consultation room" loading="lazy" width="600" height="450">
+                </div>
+                <div class="gallery-item reveal reveal-delay-1">
+                    <img src="assets/img/gallery-5.jpg" alt="Waiting area" loading="lazy" width="600" height="400">
+                </div>
+                <div class="gallery-item reveal reveal-delay-2">
+                    <img src="assets/img/gallery-6.jpg" alt="Dental tools close-up" loading="lazy" width="600"
+                        height="500">
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/img/gallery-7.jpg" alt="X-ray machine" loading="lazy" width="600" height="380">
+                </div>
+                <div class="gallery-item reveal reveal-delay-1">
+                    <img src="assets/img/gallery-8.jpg" alt="Clinic exterior" loading="lazy" width="600" height="420">
+                </div>
+                <div class="gallery-item reveal reveal-delay-2">
+                    <img src="assets/img/gallery-9.jpg" alt="Treatment in progress" loading="lazy" width="600"
+                        height="460">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="reveal">Visit Us in Person</h2>
+            <p class="reveal reveal-delay-1">Experience our clean, welcoming clinic first-hand. Book your appointment
+                today.</p>
+            <div class="btn-group reveal reveal-delay-2" style="justify-content:center;">
+                <a href="book.html" class="btn btn--primary btn--lg">Book Appointment</a>
+                <a href="contact.html" class="btn btn--white btn--lg">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Footer ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="header__logo" style="color:var(--clr-white);">
+                        <div class="header__logo-icon">SLV</div>
+                        <div class="header__logo-text">SLV Dental<span
+                                style="color:var(--clr-gray-400);">Proddatur</span></div>
+                    </a>
+                    <p>Premium dental care in Proddatur.</p>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="book.html">Book Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Treatments</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html#rct">Root Canal</a></li>
+                        <li><a href="services.html#implants">Dental Implants</a></li>
+                        <li><a href="services.html#extractions">Extractions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul class="footer__links">
+                        <li>📞 <a href="tel:+919052277769">+91 90522 77769</a></li>
+                        <li>📍 Holmes Pet Rd, Proddatur</li>
+                        <li>🕐 Mon–Sat 9 AM – 9 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2025 Sri Lakshmi Venkateswara Dental Hospital. All rights reserved.</span>
+                <span>Holmes Pet Rd, Proddatur, AP 516360 · +91 90522 77769</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>

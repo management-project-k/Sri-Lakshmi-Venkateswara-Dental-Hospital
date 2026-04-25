@@ -1,26 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Sri Lakshmi Venkateswara Dental Hospital</title>
-    <meta name="description" content="Contact Sri Lakshmi Venkateswara Dental Hospital in Proddatur. Call, WhatsApp, or book online. Find address, hours, and directions." />
-    <meta property="og:title" content="Contact - Sri Lakshmi Venkateswara Dental Hospital" />
-    <meta property="og:description" content="Find directions, opening hours, and contact options for dental appointments." />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Dentist","name":"Sri Lakshmi Venkateswara Dental Hospital","areaServed":"Proddatur","address":{"@type":"PostalAddress","streetAddress":"Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet","addressLocality":"Proddatur","addressRegion":"Andhra Pradesh","postalCode":"516360","addressCountry":"IN"},"telephone":"+91 90522 77769","openingHours":["Mo-Su 09:00-21:00"]}
-    </script>
-  </head>
-  <body>
-    <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><strong data-clinic="name"></strong><small>Super Speciality Dental Hospital</small></a><button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="gallery.html">Gallery</a><a href="contact.html" aria-current="page">Contact</a><a href="book.html">Book</a></nav></div></header>
-    <main>
-      <section class="section"><div class="container split"><div class="reveal"><p class="eyebrow">Contact</p><h1>Reach us quickly and book without friction</h1><ul class="list"><li><strong>Phone:</strong> <a data-link="tel" href="#" data-clinic="phone"></a></li><li><strong>Address:</strong> <span data-clinic="address"></span></li><li><strong>Hours:</strong> <span data-clinic="hours"></span></li><li><small>Alternate listing name: <span data-clinic="alt-name"></span></small></li></ul><div class="cta-row" style="margin-top:1rem"><a class="btn btn-primary" href="book.html">Book Appointment</a><a class="btn btn-secondary" data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-secondary" data-link="dir" href="#" target="_blank" rel="noopener">Get Directions</a></div></div><div class="map-placeholder reveal"><p>Map iframe intentionally deferred for speed.</p><a class="btn btn-secondary" data-link="dir" href="#" target="_blank" rel="noopener">Open in Google Maps</a></div></div></section>
-      <section class="section"><div class="container"><h2>Quick contact message</h2><p>This form is email-only by default. Booking is handled on the Book page via Google Sheets API.</p><form class="form-grid" action="mailto:info@example.com" method="post" enctype="text/plain"><input name="name" type="text" required placeholder="Your name" autocomplete="name" /><input name="phone" type="tel" required placeholder="Phone" inputmode="tel" autocomplete="tel" /><textarea name="message" placeholder="Message"></textarea><button class="btn btn-primary" type="submit">Send Message</button></form></div></section>
-    </main>
-    <footer class="footer"><div class="container footer-grid"><div><strong data-clinic="name"></strong><p data-clinic="address"></p><p><a data-link="tel" href="#" data-clinic="phone"></a></p></div><div><strong>Quick Links</strong><p><a href="services.html">Services</a> | <a href="book.html">Book</a> | <a href="reviews.html">Reviews</a></p></div><div><strong>Hours</strong><p data-clinic="hours"></p><small>Alt name: <span data-clinic="alt-name"></span></small></div></div><div class="container"><small>© <span id="year"></span> <span data-clinic="name"></span></small></div></footer>
-    <div class="mobile-bar"><a data-link="tel" href="#">Call</a><a data-link="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="book.html">Book</a></div>
-    <script type="module" src="assets/js/main.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Sri Lakshmi Venkateswara Dental Hospital, Proddatur</title>
+    <meta name="description"
+        content="Contact SLV Dental Hospital in Proddatur. Address: Holmes Pet Rd, opposite Kanva Mart. Phone: +91 90522 77769. Mon–Sat 9 AM – 9 PM.">
+    <meta property="og:title" content="Contact — SLV Dental Hospital, Proddatur">
+    <meta property="og:description"
+        content="Get in touch with our dental clinic. Call, WhatsApp, or visit us in Holmes Pet, Proddatur.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Home">
+                <div class="header__logo-icon">SLV</div>
+                <div class="header__logo-text">SLV Dental<span>Proddatur</span></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="main-nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="reviews.html" class="nav__link">Reviews</a></li>
+                    <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__book"><a href="book.html" class="btn btn--primary btn--sm">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== Page Header ====== -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section__tag">Contact Us</span>
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you. Reach out by phone, WhatsApp, or visit us in person.</p>
+        </div>
+    </section>
+
+    <!-- ====== Contact Info + Form ====== -->
+    <section class="section" id="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Left: Info -->
+                <div class="reveal">
+                    <h2 style="font-size:var(--fs-xl); margin-bottom:var(--sp-8);">Clinic Information</h2>
+
+                    <div class="contact-item">
+                        <div class="contact-item__icon">📍</div>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Holmes Pet Rd, opposite Kanva Mart, Ward 20, Holmes Pet, Proddatur, Andhra Pradesh
+                                516360</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item__icon">📞</div>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:+919052277769">+91 90522 77769</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item__icon">💬</div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/919052277769?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20dental%20services."
+                                target="_blank" rel="noopener">Message us on WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item__icon">🕐</div>
+                        <div>
+                            <strong>Hours</strong>
+                            <span>Monday – Saturday: 9:00 AM – 9:00 PM</span>
+                            <br><span style="font-size:var(--fs-xs); color:var(--clr-gray-400);">Closed on
+                                Sundays</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item__icon">🏥</div>
+                        <div>
+                            <strong>Clinic Name</strong>
+                            <span>Sri Lakshmi Venkateswara Dental Hospital</span>
+                            <br><span class="alt-name">Also known as: Sri Lakshmi Venkateshwara Super Speciality Dental
+                                Hospital</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:var(--sp-6);">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Sri+Lakshmi+Venkateswara+Dental+Hospital+Proddatur"
+                            target="_blank" rel="noopener" class="btn btn--primary">
+                            📍 Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="reveal reveal-delay-1">
+                    <div class="card" style="padding:var(--sp-8);">
+                        <h2 style="font-size:var(--fs-xl); margin-bottom:var(--sp-6);">Send a Message</h2>
+                        <form id="contact-form" action="mailto:clinic@example.com" method="POST" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="cf-name" class="form-label">Full Name</label>
+                                <input type="text" id="cf-name" name="name" class="form-control" placeholder="Your name"
+                                    required autocomplete="name" minlength="2">
+                                <p class="form-error">Please enter your name</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="cf-phone" name="phone" class="form-control"
+                                    placeholder="+91 XXXXX XXXXX" required autocomplete="tel" inputmode="tel">
+                                <p class="form-error">Please enter a valid phone number</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-message" class="form-label">Message</label>
+                                <textarea id="cf-message" name="message" class="form-control" rows="4"
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary" style="width:100%;">Send Message</button>
+                            <p
+                                style="margin-top:var(--sp-3); font-size:var(--fs-xs); color:var(--clr-text-muted); text-align:center;">
+                                Or call us directly at <a href="tel:+919052277769">+91 90522 77769</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Map ====== -->
+    <section class="section section--alt" id="map">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__tag">Location</span>
+                <h2>Find Us on the Map</h2>
+            </div>
+            <div class="map-placeholder reveal" style="max-width:900px; margin-inline:auto;">
+                <iframe title="Clinic location on Google Maps" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.0!2d78.55!3d14.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sin!4v1700000000000"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Footer ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="header__logo" style="color:var(--clr-white);">
+                        <div class="header__logo-icon">SLV</div>
+                        <div class="header__logo-text">SLV Dental<span
+                                style="color:var(--clr-gray-400);">Proddatur</span></div>
+                    </a>
+                    <p>Gentle, expert dental care in Proddatur.</p>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="book.html">Book Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Treatments</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html#rct">Root Canal</a></li>
+                        <li><a href="services.html#implants">Dental Implants</a></li>
+                        <li><a href="services.html#extractions">Extractions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul class="footer__links">
+                        <li>📞 <a href="tel:+919052277769">+91 90522 77769</a></li>
+                        <li>📍 Holmes Pet Rd, Proddatur</li>
+                        <li>🕐 Mon–Sat 9 AM – 9 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2025 Sri Lakshmi Venkateswara Dental Hospital. All rights reserved.</span>
+                <span>Holmes Pet Rd, Proddatur, AP 516360 · +91 90522 77769</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
